@@ -1,22 +1,35 @@
-prefix : <http://skohub.io/skohub-shacl>
-prefix sh: <http://www.w3.org/ns/shacl#>
-prefix owl: <http://www.w3.org/2002/07/owl#>
-prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-prefix xml: <http://www.w3.org/XML/1998/namespace>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix skos: <http://www.w3.org/2004/02/skos/core#>
-prefix dct: <http://purl.org/dc/terms/>
+while getopts f:s:l: flag
+do
+    case "${flag}" in
+        f) file=${OPTARG};;
+        s) shape=${OPTARG};;
+        l) severity=${OPTARG};; # not used right now
+    esac
+done
 
+# fail if any other exit status than 0
+set -e
 
+# download skos shacl shape
+curl https://raw.githubusercontent.com/skohub-io/shapes/main/skos.shacl.ttl --output skos.shacl.ttl
 
-SELECT ?focusNode ?resultMessage ?value ?sourceShape ?resultPath ?sourceConstraintComponent
-WHERE {
-	?result a sh:ValidationResult ;
-	sh:resultSeverity sh:Violation .
-	?result sh:focusNode ?focusNode ;
-		sh:sourceShape ?sourceShape ;
-		sh:resultMessage ?resultMessage ;
-		OPTIONAL { ?result sh:resultPath ?resultPath }
-		OPTIONAL { ?result sh:value ?value}
-}
+# check file is not empty
+test $(wc -l $file | awk '{print $1}') -gt 0 || (echo "file has no lines, aborting"; exit 1)
+
+echo "Validate: docker run --rm -v $(pwd)/skos.shacl.ttl:/rdf/shape.ttl -v $(pwd)/$file:/rdf/file.ttl laocoon667/jena:4.6.1 shacl v -s /rdf/shape.ttl -d /rdf/file.ttl > result.ttl"
+docker run --rm -v $(pwd)/skos.shacl.ttl:/rdf/shape.ttl -v $(pwd)/$file:/rdf/file.ttl laocoon667/jena:4.6.1 shacl v -s /rdf/shape.ttl -d /rdf/file.ttl > result.ttl
+
+# Parse the validation to check for errors
+echo "Parse Validation: docker run --rm -v $(pwd)/scripts/check-for-violation.rq:/rdf/check-for-violation.rq -v $(pwd)/result.ttl:/rdf/result.ttl laocoon667/jena:4.6.1 arq --data /rdf/result.ttl --query /rdf/check-for-violation.rq"
+validationResult="$(docker run --rm -v $(pwd)/scripts/check-for-violation.rq:/rdf/check-for-violation.rq -v $(pwd)/result.ttl:/rdf/result.ttl laocoon667/jena:4.6.1 arq --data /rdf/result.ttl --query /rdf/check-for-violation.rq)"
+
+lines=$(echo "$validationResult" | wc -l )
+
+# print validation result for informational purposes
+echo "$validationResult"
+
+# an empty result, i.e. a correct validation has 4 lines of output
+test ${lines} -eq 4 || (echo "validation errors, check output"; exit 1)
+
+# remove created files
+rm result.ttl skos.shacl.ttl
