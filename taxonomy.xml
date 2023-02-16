@@ -1,0 +1,214 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Taxonomy for Moses Zacuto's Correspondence</title>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p/>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc.getText(separator=' ', strip=True)>
+            <classDecl>
+                <taxonomy xml:id="pb-taxonomy">
+                    <category resp="mmoliere" change="08-04-2022" xml:id="topics">
+                        <catDesc xml:lang="en">Topics of a text</catDesc>
+                        <category resp="mmoliere" change="08-04-2022" xml:id="life">
+                            <catDesc xml:lang="en">Life</catDesc>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="finances">
+                                <catDesc xml:lang="en">Finances</catDesc>
+                                <desc/>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="estate">
+                                <catDesc xml:lang="en">Estate</catDesc>
+                                <desc/>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="illness">
+                                <catDesc xml:lang="en">Illness</catDesc>
+                                <desc/>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="estate">
+                                <catDesc xml:lang="en">Estate</catDesc>
+                                <desc/>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="travels">
+                                <catDesc xml:lang="en">Travels</catDesc>
+                                <desc/>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="family">
+                                <catDesc xml:lang="en">Family</catDesc>
+                                <desc/>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="profession">
+                                <catDesc xml:lang="en">Profession</catDesc>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="copies">
+                                    <catDesc xml:lang="en">Copies</catDesc>
+                                    <desc/>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="teaching">
+                                    <catDesc xml:lang="en">Teaching</catDesc>
+                                    <desc/>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="learning">
+                                    <catDesc xml:lang="en">Learning</catDesc>
+                                    <desc/>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="editing">
+                                    <catDesc xml:lang="en">Editing</catDesc>
+                                    <desc/>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="rabbinate">
+                                    <catDesc xml:lang="en">Rabbinate</catDesc>
+                                    <desc/>
+                                </category>
+                                <desc/>
+                            </category>
+                            <desc/>
+                        </category>
+                        <category resp="mmoliere" change="08-04-2022" xml:id="halakha">
+                            <catDesc xml:lang="en">Halakha</catDesc>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="mishnah">
+                                <catDesc xml:lang="en">Mishnah</catDesc>
+                                <desc/>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="circumcision">
+                                <catDesc xml:lang="en">Circumcision</catDesc>
+                                <desc/>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="divorce">
+                                <catDesc xml:lang="en">Divorce</catDesc>
+                                <desc/>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="viands">
+                                <catDesc xml:lang="en">Viands</catDesc>
+                                <desc/>
+                            </category>
+                            <desc/>
+                        </category>
+                        <category resp="mmoliere" change="08-04-2022" xml:id="liturgy">
+                            <catDesc xml:lang="en">Liturgy</catDesc>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="holidays">
+                                <catDesc xml:lang="en">Holidays</catDesc>
+                                <desc/>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="shabbat">
+                                <catDesc xml:lang="en">Shabbat</catDesc>
+                                <desc/>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="marriage">
+                                <catDesc xml:lang="en">Marriage</catDesc>
+                                <desc/>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="prayer">
+                                <catDesc xml:lang="en">Prayer</catDesc>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="shma">
+                                    <catDesc xml:lang="en">Shma</catDesc>
+                                    <desc/>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="amidah">
+                                    <catDesc xml:lang="en">Amidah</catDesc>
+                                    <desc/>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="shacharit">
+                                    <catDesc xml:lang="en">Shacharit</catDesc>
+                                    <desc/>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="minchah">
+                                    <catDesc xml:lang="en">Minchah</catDesc>
+                                    <desc/>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="selichot">
+                                    <catDesc xml:lang="en">Selichot</catDesc>
+                                    <desc/>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="tikkunim">
+                                    <catDesc xml:lang="en">Tikkunim</catDesc>
+                                    <desc/>
+                                </category>
+                                <desc/>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="food">
+                                <catDesc xml:lang="en">Food</catDesc>
+                                <desc/>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="tefillin">
+                                <catDesc xml:lang="en">Tefillin</catDesc>
+                                <desc/>
+                            </category>
+                            <desc/>
+                        </category>
+                        <category resp="mmoliere" change="08-04-2022" xml:id="kabbalah">
+                            <catDesc xml:lang="en">Kabbalah</catDesc>
+                            <catDesc xml:lang="he">קבלה</catDesc>
+                            <desc>Kabbalah is a form of Jewish mysticism concerned with the nature of God and the universe.</desc>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="theoretical">
+                                <catDesc xml:lang="en">Theoretical</catDesc>
+                                <catDesc xml:lang="he">עיונית</catDesc>
+                                <desc>Theoretical kabbalah deals with the concepts and theories behind the mystical practices of kabbalah.</desc>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="zohar">
+                                    <catDesc xml:lang="en">Zohar</catDesc>
+                                    <catDesc xml:lang="he">זוהר</catDesc>
+                                    <desc>The Zohar is the main text of the Kabbalah and it is said to reveal hidden truths about God and the
+                                        universe.</desc>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="bible">
+                                    <catDesc xml:lang="en">Bible</catDesc>
+                                    <catDesc xml:lang="he">תנ״ך</catDesc>
+                                    <desc>The Bible is central to both the traditional and mystical aspects of Judaism.</desc>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="creation">
+                                    <catDesc xml:lang="en">Creation</catDesc>
+                                    <catDesc xml:lang="he">בריאה</catDesc>
+                                    <desc>The creation of the universe is a central concept in Kabbalah and is often explored in great detail.</desc>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="letters">
+                                    <catDesc xml:lang="en">Letters</catDesc>
+                                    <catDesc xml:lang="he">אותיות</catDesc>
+                                    <desc>The letters of the Hebrew alphabet play a central role in kabbalistic thought and practice.</desc>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="kawwanot">
+                                    <catDesc xml:lang="en">Kawwanot</catDesc>
+                                    <catDesc xml:lang="he">כוונות</catDesc>
+                                    <desc>Kawwanot (sg. kawwanah) refers to the intentions behind spiritual practices in Kabbalah</desc>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="yichudim">
+                                    <catDesc xml:lang="en">Yichudim</catDesc>
+                                    <catDesc xml:lang="he">יחודים</catDesc>
+                                    <desc>Yichudim are unifying spiritual forces which are the subject of kabbalistic meditations</desc>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="holyNames">
+                                    <catDesc xml:lang="en">Holy Names</catDesc>
+                                    <catDesc xml:lang="he">שמות</catDesc>
+                                    <desc>Holy Names, or divine names, are an important component in many kabbalistic practices</desc>
+                                </category>
+                            </category>
+                            <category resp="mmoliere" change="08-04-2022" xml:id="practical">
+                                <catDesc xml:lang="en">Practical</catDesc>
+                                <catDesc xml:lang="he">מעשית</catDesc>
+                                <desc>Practical Kabbalah refers to the application or implementation of kabbalistic ideas to liturgy and everyday life</desc>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="refuot">
+                                    <catDesc xml:lang="en">Refuot</catDesc>
+                                    <catDesc xml:lang="he">רפואות</catDesc>
+                                    <desc>Refuot are kabbalistic practices which are designed to improve or maintain the health of a person</desc>
+                                </category>
+                                <category resp="mmoliere" change="08-04-2022" xml:id="segullot">
+                                    <catDesc xml:lang="en">Segullot</catDesc>
+                                    <catDesc xml:lang="he">סגולות</catDesc>
+                                    <desc>Segullot are the exoteric aspects of Kabbalistic practices</desc>
+                                </category>
+                            </category>
+                        </category>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p/>
+        </body>
+    </text>
+</TEI>
