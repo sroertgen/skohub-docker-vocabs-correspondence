@@ -1,0 +1,243 @@
+@prefix taxonomy: <https://ulb.uni-muenster.de/vocab/skos/bible#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+taxonomy: a skos:ConceptScheme ;
+   dct:title "Taxonomy for Moses Zacuto's Correspondence"@en ;
+   skos:hasTopConcept taxonomy:topics .
+
+taxonomy:finances a skos:Concept ;
+   skos:broader taxonomy:life ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Finances"@en .
+
+taxonomy:estate a skos:Concept ;
+   skos:broader taxonomy:life ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Estate"@en .
+
+taxonomy:illness a skos:Concept ;
+   skos:broader taxonomy:life ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Illness"@en .
+
+taxonomy:travels a skos:Concept ;
+   skos:broader taxonomy:life ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Travels"@en .
+
+taxonomy:family a skos:Concept ;
+   skos:broader taxonomy:life ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Family"@en .
+
+taxonomy:copies a skos:Concept ;
+   skos:broader taxonomy:profession ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Copies"@en .
+
+taxonomy:teaching a skos:Concept ;
+   skos:broader taxonomy:profession ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Teaching"@en .
+
+taxonomy:learning a skos:Concept ;
+   skos:broader taxonomy:profession ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Learning"@en .
+
+taxonomy:editing a skos:Concept ;
+   skos:broader taxonomy:profession ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Editing"@en .
+
+taxonomy:rabbinate a skos:Concept ;
+   skos:broader taxonomy:profession ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Rabbinate"@en .
+
+taxonomy:profession a skos:Concept ;
+   skos:broader taxonomy:life ;
+   skos:inScheme taxonomy: ;
+   skos:narrower taxonomy:copies, taxonomy:teaching, taxonomy:learning, taxonomy:editing, taxonomy:rabbinate ;
+   skos:prefLabel "Profession"@en .
+
+taxonomy:life a skos:Concept ;
+   skos:broader taxonomy:topics ;
+   skos:inScheme taxonomy: ;
+   skos:narrower taxonomy:finances, taxonomy:estate, taxonomy:illness, taxonomy:estate, taxonomy:travels, taxonomy:family, taxonomy:profession ;
+   skos:prefLabel "Life"@en .
+
+taxonomy:mishnah a skos:Concept ;
+   skos:broader taxonomy:halakha ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Mishnah"@en .
+
+taxonomy:circumcision a skos:Concept ;
+   skos:broader taxonomy:halakha ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Circumcision"@en .
+
+taxonomy:divorce a skos:Concept ;
+   skos:broader taxonomy:halakha ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Divorce"@en .
+
+taxonomy:viands a skos:Concept ;
+   skos:broader taxonomy:halakha ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Viands"@en .
+
+taxonomy:halakha a skos:Concept ;
+   skos:broader taxonomy:topics ;
+   skos:inScheme taxonomy: ;
+   skos:narrower taxonomy:mishnah, taxonomy:circumcision, taxonomy:divorce, taxonomy:viands ;
+   skos:prefLabel "Halakha"@en .
+
+taxonomy:holidays a skos:Concept ;
+   skos:broader taxonomy:liturgy ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Holidays"@en .
+
+taxonomy:shabbat a skos:Concept ;
+   skos:broader taxonomy:liturgy ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Shabbat"@en .
+
+taxonomy:marriage a skos:Concept ;
+   skos:broader taxonomy:liturgy ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Marriage"@en .
+
+taxonomy:shma a skos:Concept ;
+   skos:broader taxonomy:prayer ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Shma"@en .
+
+taxonomy:amidah a skos:Concept ;
+   skos:broader taxonomy:prayer ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Amidah"@en .
+
+taxonomy:shacharit a skos:Concept ;
+   skos:broader taxonomy:prayer ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Shacharit"@en .
+
+taxonomy:minchah a skos:Concept ;
+   skos:broader taxonomy:prayer ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Minchah"@en .
+
+taxonomy:selichot a skos:Concept ;
+   skos:broader taxonomy:prayer ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Selichot"@en .
+
+taxonomy:tikkunim a skos:Concept ;
+   skos:broader taxonomy:prayer ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Tikkunim"@en .
+
+taxonomy:prayer a skos:Concept ;
+   skos:broader taxonomy:liturgy ;
+   skos:inScheme taxonomy: ;
+   skos:narrower taxonomy:shma, taxonomy:amidah, taxonomy:shacharit, taxonomy:minchah, taxonomy:selichot, taxonomy:tikkunim ;
+   skos:prefLabel "Prayer"@en .
+
+taxonomy:food a skos:Concept ;
+   skos:broader taxonomy:liturgy ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Food"@en .
+
+taxonomy:tefillin a skos:Concept ;
+   skos:broader taxonomy:liturgy ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Tefillin"@en .
+
+taxonomy:liturgy a skos:Concept ;
+   skos:broader taxonomy:topics ;
+   skos:inScheme taxonomy: ;
+   skos:narrower taxonomy:holidays, taxonomy:shabbat, taxonomy:marriage, taxonomy:prayer, taxonomy:food, taxonomy:tefillin ;
+   skos:prefLabel "Liturgy"@en .
+
+taxonomy:zohar a skos:Concept ;
+   skos:definition "The Zohar is the main text of the Kabbalah and it is said to reveal hidden truths about God and the                                         universe."@en ;
+   skos:broader taxonomy:theoretical ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Zohar"@en, "זוהר"@he .
+
+taxonomy:bible a skos:Concept ;
+   skos:definition "The Bible is central to both the traditional and mystical aspects of Judaism."@en ;
+   skos:broader taxonomy:theoretical ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Bible"@en, "תנ״ך"@he .
+
+taxonomy:creation a skos:Concept ;
+   skos:definition "The creation of the universe is a central concept in Kabbalah and is often explored in great detail."@en ;
+   skos:broader taxonomy:theoretical ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Creation"@en, "בריאה"@he .
+
+taxonomy:letters a skos:Concept ;
+   skos:definition "The letters of the Hebrew alphabet play a central role in kabbalistic thought and practice."@en ;
+   skos:broader taxonomy:theoretical ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Letters"@en, "אותיות"@he .
+
+taxonomy:kawwanot a skos:Concept ;
+   skos:definition "Kawwanot (sg. kawwanah) refers to the intentions behind spiritual practices in Kabbalah"@en ;
+   skos:broader taxonomy:theoretical ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Kawwanot"@en, "כוונות"@he .
+
+taxonomy:yichudim a skos:Concept ;
+   skos:definition "Yichudim are unifying spiritual forces which are the subject of kabbalistic meditations"@en ;
+   skos:broader taxonomy:theoretical ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Yichudim"@en, "יחודים"@he .
+
+taxonomy:holyNames a skos:Concept ;
+   skos:definition "Holy Names, or divine names, are an important component in many kabbalistic practices"@en ;
+   skos:broader taxonomy:theoretical ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Holy Names"@en, "שמות"@he .
+
+taxonomy:theoretical a skos:Concept ;
+   skos:definition "Theoretical kabbalah deals with the concepts and theories behind the mystical practices of kabbalah."@en ;
+   skos:broader taxonomy:kabbalah ;
+   skos:inScheme taxonomy: ;
+   skos:narrower taxonomy:zohar, taxonomy:bible, taxonomy:creation, taxonomy:letters, taxonomy:kawwanot, taxonomy:yichudim, taxonomy:holyNames ;
+   skos:prefLabel "Theoretical"@en, "עיונית"@he .
+
+taxonomy:refuot a skos:Concept ;
+   skos:definition "Refuot are kabbalistic practices which are designed to improve or maintain the health of a person"@en ;
+   skos:broader taxonomy:practical ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Refuot"@en, "רפואות"@he .
+
+taxonomy:segullot a skos:Concept ;
+   skos:definition "Segullot are the exoteric aspects of Kabbalistic practices"@en ;
+   skos:broader taxonomy:practical ;
+   skos:inScheme taxonomy: ;
+   skos:prefLabel "Segullot"@en, "סגולות"@he .
+
+taxonomy:practical a skos:Concept ;
+   skos:definition "Practical Kabbalah refers to the application or implementation of kabbalistic ideas to liturgy and everyday life"@en ;
+   skos:broader taxonomy:kabbalah ;
+   skos:inScheme taxonomy: ;
+   skos:narrower taxonomy:refuot, taxonomy:segullot ;
+   skos:prefLabel "Practical"@en, "מעשית"@he .
+
+taxonomy:kabbalah a skos:Concept ;
+   skos:definition "Kabbalah is a form of Jewish mysticism concerned with the nature of God and the universe."@en ;
+   skos:broader taxonomy:topics ;
+   skos:inScheme taxonomy: ;
+   skos:narrower taxonomy:theoretical, taxonomy:practical ;
+   skos:prefLabel "Kabbalah"@en, "קבלה"@he .
+
+taxonomy:topics a skos:Concept ;
+   skos:topConceptOf taxonomy: ;
+   skos:narrower taxonomy:life, taxonomy:halakha, taxonomy:liturgy, taxonomy:kabbalah ;
+   skos:prefLabel "Topics of a text"@en .
