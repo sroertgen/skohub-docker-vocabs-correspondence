@@ -73,7 +73,7 @@ jobs:
 
       - run: mkdir data
 
-      - run: git clone https://github.com/Heiss/skohub-docker-vocabs-correspondence.git data/
+      - run: git clone https://github.com/sroertgen/skohub-docker-vocabs-correspondence data/
 
       - name: make .env file
 
